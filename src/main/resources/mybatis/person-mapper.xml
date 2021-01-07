@@ -9,11 +9,11 @@
 		select * from kh.person order by reg_date desc
 	</select>
 	
-	<delete id="deletePerson">
+	<delete id="delete">
 		delete from kh.person where seq = ${seq}
 	</delete>
 	
-	<insert id="insertPerson">
+	<insert id="insert">
 		insert into kh.person values(${person_seq.nextval},${name},${contact},${reg_date})
 	</insert>
 

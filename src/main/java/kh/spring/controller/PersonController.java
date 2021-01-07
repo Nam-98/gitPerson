@@ -19,7 +19,6 @@ import kh.spring.dao.PersonDAO;
 import kh.spring.service.PersonService;
 
 @Controller
-@RequestMapping()
 public class PersonController {
 
 	@Autowired

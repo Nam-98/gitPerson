@@ -2,10 +2,18 @@
 <!DOCTYPE mapper
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-  <mapper namespace="Person">
-  
-  <select id ="getAllList" resultType="kh.spring.dto.PersonDTO">
-  	select * from kh.person
-  </select>
-  
-  </mapper>
+<mapper namespace="Person">
+
+	<select id="getAllList" resultType="kh.spring.dto.PersonDTO">
+		select * from kh.person order by reg_date desc
+	</select>
+	
+	<delete id="deletePerson">
+		delete from kh.person where seq = ${seq}
+	</delete>
+	
+	<insert id="insertPerson">
+		insert into kh.person values(${person_seq.nextval},${name},${contact},${reg_date})
+	</insert>
+
+</mapper>

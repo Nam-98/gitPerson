@@ -11,7 +11,11 @@ public class PersonDAO {
 
 	@Autowired
 	private SqlSession db;
-	
+
+	public int deletePerson(int seq) {
+		return db.delete("Person.delete",seq);
+	}
+
 	public List<PersonDAO> getAll() throws Exception{
 		return db.selectList("Person.getAllList");
 	}

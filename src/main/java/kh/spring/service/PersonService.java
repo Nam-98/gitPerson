@@ -1,8 +1,20 @@
 package kh.spring.service;
 
-import org.springframework.stereotype.Repository;
+import java.util.List;
 
-@Repository
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import kh.spring.dao.PersonDAO;
+
+@Service
 public class PersonService {
 
+	@Autowired
+	private PersonDAO dao;
+	
+	public List<PersonDAO> getAll() throws Exception{
+		return dao.getAll();
+	}
+	
 }

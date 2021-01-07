@@ -51,6 +51,7 @@ public class PersonController {
 		String contact = request.getParameter("contact");
 		System.out.println(name +":" + contact);
 		int result = pservice.personInput(name,contact);
+		System.out.println(result);
 		return "home";
 	}
 		
@@ -61,10 +62,11 @@ public class PersonController {
 	
 	@RequestMapping("delete.person")
 	public String deletePerson(HttpServletRequest request) throws Exception{
-		int seq = Integer.parseInt(request.getParameter("seq"));
+		int seq = Integer.parseInt(request.getParameter("num"));
+		System.out.println(seq);
 		int result = pservice.deletePerson(seq);
 		request.setAttribute("result", result);
-		return "/";
+		return "redirect:/";
 	}
 	
 	@RequestMapping("output.person")

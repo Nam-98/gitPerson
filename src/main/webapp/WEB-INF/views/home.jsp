@@ -10,11 +10,8 @@
 </head>
 <body>
 
-	<a href="input.jsp">입력하기</a>
-
 	<a href="input.person">input</a>
 	<a href="output.person">output</a>
-	<a href="delete.person">delete</a>
 
 </body>
 </html>

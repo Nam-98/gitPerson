@@ -10,11 +10,11 @@
 	</select>
 	
 	<delete id="delete">
-		delete from kh.person where seq = ${seq}
+		delete from kh.person where seq = #{seq}
 	</delete>
 	
 	<insert id="insert">
-		insert into kh.person values(${person_seq.nextval},${name},${contact},${reg_date})
+		insert into kh.person values(kh.person_seq.nextval,#{name},#{contact},sysdate)
 	</insert>
 
 </mapper>

@@ -10,6 +10,12 @@
 <body>
 	<fieldset>
 		<legend>Output</legend>
+		<c:forEach var="l" items='${list}'>
+            <div>
+               <span>${l.seq}</span><span>${l.name}</span><span>${l.contact}</span><span>${l.reg_date}</span><span>
+                  </span>
+            </div>
+         </c:forEach>
    <form action="delete.person" method="post">
 		<input type=text name=num placeholder="번호"><br>
 		<input type=submit>
